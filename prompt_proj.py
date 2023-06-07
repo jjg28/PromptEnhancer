@@ -2,6 +2,7 @@ import streamlit as st
 from langchain.llms import OpenAIChat
 from langchain import PromptTemplate, OpenAI, LLMChain
 import openai
+import os
 
 
 st.set_page_config(page_title="💬 Prompt Enhancer", layout="wide")
@@ -36,9 +37,12 @@ with st.sidebar:
     st.title("💡 How to use")
 
     with st.form("OpenAI API Key Input"):
-        api_key = st.text_input(label="🔑 OpenAI API Key",
-                                placeholder="Input your API key here")
+        openai_api_key = st.text_input(label="🔑 OpenAI API Key",
+                                       placeholder="Input your API key here")
+
         submitted = st.form_submit_button("Submit")
+        if submitted:
+            os.environ["OPENAI_API_KEY"] = openai_api_key
     st.write("""
     1. Input a prompt that you would intend to input to GPT or any other LLM
     2. Receive 3 outputs with a description detailing reasoning for output
