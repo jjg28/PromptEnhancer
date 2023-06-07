@@ -49,7 +49,7 @@ with st.sidebar:
     st.write("""
     - This is just simple project I made in a couple hours to familiarize myself with creating apps with [OpenAI API](https://platform.openai.com/), [LangChain](https://python.langchain.com/en/latest/), and [Streamlit](https://streamlit.io/)
 
-    - Here's a link to the [GitHub Repo](include hyperlink on GitHub Repo)
+    - Here's a link to the [GitHub repository](https://github.com/MichaelElHage/PromptEnhancer)
     - If you're intersted in my thoughts as I progressed with making this as well as problems I encountered, please check out my post on [Medium](medium)!
     """)
 
