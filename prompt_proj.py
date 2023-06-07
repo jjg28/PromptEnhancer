@@ -72,7 +72,8 @@ prompt = PromptTemplate(template=template, input_variables=["prompt"])
 
 with st.form("Prompt Input"):
     st.write("Input your prompt below")
-    prompt_input = st.text_area("", placeholder="Input your prompt here")
+    prompt_input = st.text_area(
+        label="prompt input", placeholder="Input your prompt here", label_visibility="hidden")
 
     # Every form must have a submit button.
     submitted = st.form_submit_button("Submit")
