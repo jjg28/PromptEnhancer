@@ -9,7 +9,6 @@ st.set_page_config(page_title="💬 Prompt Enhancer", layout="wide")
 
 
 # formatting for Empty space above main area and side bar
-
 st.markdown(
     f'''
             <style>
@@ -29,7 +28,7 @@ st.markdown(
 # titles and description
 st.title("💬 Prompt Enhancer")
 st.subheader(
-    "A tool for coming up with better prompts to input into GPT or other Large Language Models")
+    "A tool for coming up with better prompts to input into GPT or other large language models")
 
 
 # creating side bar
@@ -44,9 +43,10 @@ with st.sidebar:
         if submitted:
             os.environ["OPENAI_API_KEY"] = openai_api_key
     st.write("""
-    1. Input a prompt that you would intend to input to GPT or any other LLM
-    2. Receive 3 outputs with a description detailing reasoning for output
-    3. Select a prompt and input it into your choice of LLM
+    1. Input your OpenAI API key in the box above
+    2. Input a prompt that you would intend to input to GPT or any other LLM
+    3. Receive 3 outputs with a description detailing reasoning for output
+    4. Select a prompt and input it into your choice of LLM
     """)
     st.write("---")
     st.title("ℹ️   About")
@@ -59,7 +59,7 @@ with st.sidebar:
 
 
 template = """Prompt: {prompt}
-Answer: Provide 3 differently worded prompts than the one inputted. the prompts that you provide is intended to be re-inputted into a large language model. Try to adhere to the integrity of the prompt inputted by the user as much as possible.
+Answer: Provide 3 differently worded prompts than the one above. the prompts that you provide is intended to be re-inputted into a large language model. Try to adhere to the integrity of the prompt inputted by the user as much as possible.
 
 - Additionally explain how each prompt relates to the original and quote the original.
 - IMPORTANT >>>> Do not reword or change any text in quotations.
@@ -67,6 +67,7 @@ Answer: Provide 3 differently worded prompts than the one inputted. the prompts 
 - Do not create original prompts. All outputs should be inspired by the user's original prompt.
 - Do not answer the prompts.
     """
+
 
 prompt = PromptTemplate(template=template, input_variables=["prompt"])
 
