@@ -54,7 +54,6 @@ Give a ⭐️ if this project helped you!
 
 Email: elhagemi@msu.edu
 Twitter: [@nachloride27](https://twitter.com/nachloride27)
-GitHub: [@MichaelElHage](https://github.com/MichaelElHage)
 
 ---
 
